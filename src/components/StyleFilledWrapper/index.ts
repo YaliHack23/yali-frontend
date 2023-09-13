@@ -1,0 +1,1 @@
+export { StyleFilledWrapper } from "./StyleFilledWrapper";

@@ -1,0 +1,613 @@
+.edit-MY-profile {
+  background-color: #eeeeeeee;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.edit-MY-profile .div {
+  background-color: #eeeeeeee;
+  height: 1024px;
+  position: relative;
+  width: 1440px;
+}
+
+.edit-MY-profile .overlap {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 905px;
+  left: 347px;
+  position: absolute;
+  top: 67px;
+  width: 745px;
+}
+
+.edit-MY-profile .overlap-group {
+  height: 119px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 745px;
+}
+
+.edit-MY-profile .text-wrapper {
+  color: #333333;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 571px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 100px;
+}
+
+.edit-MY-profile .rectangle {
+  background-color: #909090;
+  border-radius: 10px 10px 0px 0px;
+  height: 86px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 745px;
+}
+
+.edit-MY-profile .ellipse {
+  background-color: #333333;
+  border-radius: 36px;
+  height: 72px;
+  left: 26px;
+  position: absolute;
+  top: 47px;
+  width: 72px;
+}
+
+.edit-MY-profile .user-person {
+  height: 44px !important;
+  left: 40px !important;
+  position: absolute !important;
+  top: 61px !important;
+  width: 44px !important;
+}
+
+.edit-MY-profile .ellipse-2 {
+  background-color: #d9d9d9;
+  border-radius: 11.5px;
+  height: 23px;
+  left: 76px;
+  position: absolute;
+  top: 45px;
+  width: 23px;
+}
+
+.edit-MY-profile .vector {
+  height: 11px;
+  left: 82px;
+  position: absolute;
+  top: 50px;
+  width: 11px;
+}
+
+.edit-MY-profile .group {
+  height: 26px;
+  left: 26px;
+  position: absolute;
+  top: 840px;
+  width: 136px;
+}
+
+.edit-MY-profile .div-wrapper {
+  background-color: #606060;
+  border-radius: 5px;
+  height: 26px;
+  position: relative;
+  width: 134px;
+}
+
+.edit-MY-profile .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 9px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 4px;
+}
+
+.edit-MY-profile .group-2 {
+  height: 53px;
+  left: 26px;
+  position: absolute;
+  top: 224px;
+  width: 449px;
+}
+
+.edit-MY-profile .text-wrapper-3 {
+  color: #333333;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 12px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.edit-MY-profile .overlap-2 {
+  border-radius: 5px;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 23px;
+  width: 445px;
+}
+
+.edit-MY-profile .text-wrapper-4 {
+  color: var(--black);
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 10px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 7px;
+}
+
+.edit-MY-profile .rectangle-2 {
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 5px;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 445px;
+}
+
+.edit-MY-profile .arrows-chevron-arrow {
+  height: 12px !important;
+  left: 422px !important;
+  position: absolute !important;
+  top: 9px !important;
+  width: 12px !important;
+}
+
+.edit-MY-profile .p {
+  color: #333333;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 12px;
+  font-weight: 700;
+  left: 26px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 690px;
+}
+
+.edit-MY-profile .group-3 {
+  height: 30px;
+  left: 26px;
+  position: absolute;
+  top: 719px;
+  width: 449px;
+}
+
+.edit-MY-profile .text-wrapper-5 {
+  color: #333333;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 21px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 7px;
+}
+
+.edit-MY-profile .img {
+  height: 17px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 17px;
+}
+
+.edit-MY-profile .overlap-3 {
+  border-radius: 5px;
+  height: 30px;
+  left: 99px;
+  position: absolute;
+  top: 0;
+  width: 346px;
+}
+
+.edit-MY-profile .text-wrapper-6 {
+  color: #333333;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 10px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 7px;
+}
+
+.edit-MY-profile .rectangle-3 {
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 5px;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 346px;
+}
+
+.edit-MY-profile .group-4 {
+  height: 30px;
+  left: 26px;
+  position: absolute;
+  top: 761px;
+  width: 449px;
+}
+
+.edit-MY-profile .vector-2 {
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 8px;
+  width: 15px;
+}
+
+.edit-MY-profile .group-5 {
+  height: 53px;
+  left: 26px;
+  position: absolute;
+  top: 289px;
+  width: 449px;
+}
+
+.edit-MY-profile .group-6 {
+  height: 69px;
+  left: 26px;
+  position: absolute;
+  top: 438px;
+  width: 449px;
+}
+
+.edit-MY-profile .enter-your-interests {
+  color: #333333;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.edit-MY-profile .span {
+  font-weight: 700;
+}
+
+.edit-MY-profile .text-wrapper-7 {
+  font-family: "Segoe UI-Regular", Helvetica;
+}
+
+.edit-MY-profile .overlap-4 {
+  border-radius: 5px;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 39px;
+  width: 445px;
+}
+
+.edit-MY-profile .overlap-group-wrapper {
+  height: 20px;
+  left: 8px;
+  position: absolute;
+  top: 5px;
+  width: 58px;
+}
+
+.edit-MY-profile .overlap-group-2 {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  height: 20px;
+  position: relative;
+  width: 56px;
+}
+
+.edit-MY-profile .text-wrapper-8 {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 7px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 1px;
+  width: 42px;
+}
+
+.edit-MY-profile .overlap-wrapper {
+  height: 20px;
+  left: 73px;
+  position: absolute;
+  top: 5px;
+  width: 58px;
+}
+
+.edit-MY-profile .text-wrapper-9 {
+  color: #909090;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 142px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 7px;
+}
+
+.edit-MY-profile .group-7 {
+  height: 72px;
+  left: 26px;
+  position: absolute;
+  top: 354px;
+  width: 455px;
+}
+
+.edit-MY-profile .overlap-5 {
+  border-radius: 5px;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 42px;
+  width: 217px;
+}
+
+.edit-MY-profile .rectangle-4 {
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 5px;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 217px;
+}
+
+.edit-MY-profile .style-filled {
+  height: 12px !important;
+  left: 195px !important;
+  position: absolute !important;
+  top: 9px !important;
+  width: 12px !important;
+}
+
+.edit-MY-profile .text-wrapper-10 {
+  color: #333333;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 21px;
+}
+
+.edit-MY-profile .overlap-6 {
+  border-radius: 5px;
+  height: 30px;
+  left: 229px;
+  position: absolute;
+  top: 42px;
+  width: 216px;
+}
+
+.edit-MY-profile .rectangle-5 {
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 5px;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 216px;
+}
+
+.edit-MY-profile .text-wrapper-11 {
+  color: #333333;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 229px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 21px;
+}
+
+.edit-MY-profile .group-8 {
+  height: 72px;
+  left: 26px;
+  position: absolute;
+  top: 561px;
+  width: 455px;
+}
+
+.edit-MY-profile .arrows-chevron-arrow-down-3 {
+  height: 12px !important;
+  left: 194px !important;
+  position: absolute !important;
+  top: 9px !important;
+  width: 12px !important;
+}
+
+.edit-MY-profile .group-9 {
+  height: 72px;
+  left: 26px;
+  position: absolute;
+  top: 140px;
+  width: 455px;
+}
+
+.edit-MY-profile .line {
+  height: 1px;
+  left: 5px;
+  object-fit: cover;
+  position: absolute;
+  top: 533px;
+  width: 732px;
+}
+
+.edit-MY-profile .line-2 {
+  height: 1px;
+  left: 5px;
+  object-fit: cover;
+  position: absolute;
+  top: 669px;
+  width: 732px;
+}
+
+.edit-MY-profile .overlap-7 {
+  background-color: #ffffff;
+  height: 49px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.edit-MY-profile .group-10 {
+  height: 38px;
+  left: 1077px;
+  position: absolute;
+  top: 5px;
+  width: 28px;
+}
+
+.edit-MY-profile .overlap-8 {
+  height: 38px;
+  position: relative;
+  width: 26px;
+}
+
+.edit-MY-profile .interface-essential-home {
+  left: 1px !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.edit-MY-profile .text-wrapper-12 {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 23px;
+}
+
+.edit-MY-profile .group-11 {
+  height: 38px;
+  left: 1128px;
+  position: absolute;
+  top: 5px;
+  width: 37px;
+}
+
+.edit-MY-profile .overlap-9 {
+  height: 38px;
+  position: relative;
+  width: 35px;
+}
+
+.edit-MY-profile .user-person-1 {
+  height: 24px !important;
+  left: 5px !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 24px !important;
+}
+
+.edit-MY-profile .text-wrapper-13 {
+  color: #606060;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 11px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 23px;
+}
+
+.edit-MY-profile .overlap-10 {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  height: 31px;
+  left: 425px;
+  position: absolute;
+  top: 9px;
+  width: 363px;
+}
+
+.edit-MY-profile .text-wrapper-14 {
+  color: #909090;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 6px;
+  width: 211px;
+}
+
+.edit-MY-profile .vector-3 {
+  height: 15px;
+  left: 8px;
+  position: absolute;
+  top: 8px;
+  width: 15px;
+}
+
+.edit-MY-profile .ellipse-3 {
+  background-color: #606060;
+  border-radius: 13.5px;
+  height: 27px;
+  left: 128px;
+  position: absolute;
+  top: 11px;
+  width: 27px;
+}
+
+.edit-MY-profile .text-wrapper-15 {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 160px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16px;
+}

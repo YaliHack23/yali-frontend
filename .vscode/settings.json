@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/84e46bcb-d578-423c-806e-a3055cf49719/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/yalinetwork",
+    "appService.deploySubpath": "."
+}

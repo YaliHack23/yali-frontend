@@ -1,0 +1,23 @@
+.style-filled-wrapper {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.style-filled-wrapper .icon {
+  position: absolute;
+}
+
+.style-filled-wrapper .filled {
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  width: 18px;
+}
+
+.style-filled-wrapper .outlined {
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  width: 20px;
+}

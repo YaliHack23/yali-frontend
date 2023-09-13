@@ -1,0 +1,430 @@
+.feed {
+  background-color: #eeeeeeee;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.feed .div-2 {
+  background-color: #eeeeeeee;
+  height: 1024px;
+  position: relative;
+  width: 1440px;
+}
+
+.feed .group {
+  height: 260px;
+  left: 427px;
+  position: absolute;
+  top: 349px;
+  width: 747px;
+}
+
+.feed .overlap {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 260px;
+  position: relative;
+  width: 745px;
+}
+
+.feed .group-2 {
+  height: 40px;
+  left: 26px;
+  position: absolute;
+  top: 19px;
+  width: 251px;
+}
+
+.feed .div-3 {
+  background-color: #333333;
+  border-radius: 20px;
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.feed .text-wrapper-2 {
+  color: #333333;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  left: 53px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.feed .text-wrapper-3 {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 53px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 21px;
+  width: 194px;
+}
+
+.feed .overlap-group-wrapper {
+  height: 20px;
+  left: 26px;
+  position: absolute;
+  top: 215px;
+  width: 58px;
+}
+
+.feed .div-wrapper {
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 5px;
+  height: 20px;
+  position: relative;
+  width: 56px;
+}
+
+.feed .text-wrapper-4 {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 6px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 42px;
+}
+
+.feed .overlap-wrapper {
+  height: 20px;
+  left: 91px;
+  position: absolute;
+  top: 215px;
+  width: 58px;
+}
+
+.feed .group-3 {
+  height: 26px;
+  left: 643px;
+  position: absolute;
+  top: 209px;
+  width: 74px;
+}
+
+.feed .overlap-2 {
+  background-color: #606060;
+  border-radius: 5px;
+  height: 26px;
+  position: relative;
+  width: 72px;
+}
+
+.feed .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  width: 42px;
+}
+
+.feed .group-4 {
+  height: 16px;
+  left: 79px;
+  position: absolute;
+  top: 59px;
+  width: 172px;
+}
+
+.feed .element-hours-ago-nairobi {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.feed .vector {
+  height: 14px;
+  left: 156px;
+  position: absolute;
+  top: 2px;
+  width: 14px;
+}
+
+.feed .p {
+  color: #333333;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  left: 26px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 98px;
+  width: 681px;
+}
+
+.feed .group-5 {
+  height: 260px;
+  left: 427px;
+  position: absolute;
+  top: 72px;
+  width: 747px;
+}
+
+.feed .group-6 {
+  height: 40px;
+  left: 26px;
+  position: absolute;
+  top: 19px;
+  width: 167px;
+}
+
+.feed .user-person {
+  height: 24px !important;
+  left: 8px !important;
+  position: absolute !important;
+  top: 8px !important;
+  width: 24px !important;
+}
+
+.feed .text-wrapper-6 {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 53px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 21px;
+  width: 110px;
+}
+
+.feed .group-7 {
+  height: 20px;
+  left: 156px;
+  position: absolute;
+  top: 215px;
+  width: 58px;
+}
+
+.feed .group-8 {
+  height: 19px;
+  left: 221px;
+  position: absolute;
+  top: 216px;
+  width: 44px;
+}
+
+.feed .text-wrapper-7 {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 42px;
+}
+
+.feed .group-9 {
+  height: 20px;
+  left: 640px;
+  position: absolute;
+  top: 18px;
+  width: 77px;
+}
+
+.feed .overlap-3 {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  height: 20px;
+  position: relative;
+  width: 75px;
+}
+
+.feed .interface-essential {
+  height: 13px !important;
+  left: 56px !important;
+  position: absolute !important;
+  top: 4px !important;
+  width: 13px !important;
+}
+
+.feed .text-wrapper-8 {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 1px;
+  width: 58px;
+}
+
+.feed .group-10 {
+  height: 260px;
+  left: 427px;
+  position: absolute;
+  top: 626px;
+  width: 747px;
+}
+
+.feed .leftsidecard-01 {
+  left: 131px !important;
+  position: absolute !important;
+  top: 71px !important;
+}
+
+.feed .overlap-4 {
+  background-color: #ffffff;
+  height: 49px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.feed .group-11 {
+  height: 38px;
+  left: 1077px;
+  position: absolute;
+  top: 5px;
+  width: 30px;
+}
+
+.feed .overlap-5 {
+  height: 38px;
+  position: relative;
+  width: 28px;
+}
+
+.feed .text-wrapper-9 {
+  color: #606060;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-size: 11px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 23px;
+}
+
+.feed .interface-essential-home {
+  left: 1px !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.feed .group-12 {
+  height: 38px;
+  left: 1129px;
+  position: absolute;
+  top: 5px;
+  width: 34px;
+}
+
+.feed .overlap-6 {
+  height: 38px;
+  position: relative;
+  width: 32px;
+}
+
+.feed .user-person-2 {
+  height: 24px !important;
+  left: 4px !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 24px !important;
+}
+
+.feed .text-wrapper-10 {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 23px;
+}
+
+.feed .overlap-7 {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  height: 31px;
+  left: 425px;
+  position: absolute;
+  top: 9px;
+  width: 363px;
+}
+
+.feed .text-wrapper-11 {
+  color: #909090;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 6px;
+  width: 211px;
+}
+
+.feed .img {
+  height: 15px;
+  left: 8px;
+  position: absolute;
+  top: 8px;
+  width: 15px;
+}
+
+.feed .ellipse {
+  background-color: #606060;
+  border-radius: 13.5px;
+  height: 27px;
+  left: 128px;
+  position: absolute;
+  top: 11px;
+  width: 27px;
+}
+
+.feed .text-wrapper-12 {
+  color: #606060;
+  font-family: "Segoe UI-Regular", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 160px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16px;
+}
