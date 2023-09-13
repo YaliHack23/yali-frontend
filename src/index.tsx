@@ -3,7 +3,7 @@ import ReactDOMClient from "react-dom/client";
 import { Feed } from "./screens/Feed";
 import { ViewMyProfile } from "./screens/ViewMyProfile";
 import { ViewAlumniProfile } from "./screens/ViewAlumniProfile";
-import { EditMyProfile } from "./screens/EditMyprofile";
+import { EditMyProfile } from "./screens/EditMyProfile";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const app = document.getElementById("app");
