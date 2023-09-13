@@ -1,1 +1,1 @@
-# yali-frontend
+YALI Network For Connecting Alumni, Partners and the YALI centers.
