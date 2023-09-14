@@ -1,1 +1,0 @@
-export { ShareFilled } from "./ShareFilled";

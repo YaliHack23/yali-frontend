@@ -1,1 +1,0 @@
-export { ShareOutlined } from "./ShareOutlined";
