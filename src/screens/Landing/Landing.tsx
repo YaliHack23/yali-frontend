@@ -1,10 +1,9 @@
 import React from "react";
 import "./style.css";
-import { pbClient } from "../../index"; 
+import { pbClient } from "../../index";
 
 function initLoginPopup() {
   pbClient.initLoginPopup();
-  this.setState();
 }
 
 export const Landing = (): JSX.Element => {
@@ -12,7 +11,9 @@ export const Landing = (): JSX.Element => {
     <div className="landing">
       Landing Page {pbClient.isLoggedIn ? "Logged In" : "Logged Out"}
       Landing Page {pbClient.user?.email}
-      <button className="btn btn-primary" onClick={initLoginPopup}>Login</button>
+      <button className="btn btn-primary" onClick={initLoginPopup}>
+        Login
+      </button>
     </div>
   );
 };
