@@ -37,9 +37,9 @@ export const pbClient = new pb(pocketbaseUrl);
 // });
 
 // Example of how to get all posts
-pbClient.getPosts({ first: 1, last: 50 }).then((res) => {
-  console.log(res);
-});
+// pbClient.postsObservable.subscribe((posts) => {
+//   console.log(posts);
+// });
 
 root.render(
   <BrowserRouter basename="">
