@@ -1,1 +1,0 @@
-export { ViewAlumniProfile } from "./ViewAlumniProfile";

@@ -1,1 +1,0 @@
-export { Leftsidecard } from "./Leftsidecard";

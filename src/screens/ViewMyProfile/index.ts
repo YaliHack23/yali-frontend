@@ -1,1 +1,0 @@
-export { ViewMyProfile } from "./ViewMyProfile";

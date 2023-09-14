@@ -1,1 +1,0 @@
-export { StyleFilled } from "./StyleFilled";
