@@ -4,7 +4,6 @@ import { pbClient } from "../../index";
 
 function initLoginPopup() {
   pbClient.initLoginPopup();
-  this.setState();
 }
 
 export const Landing = (): JSX.Element => {
