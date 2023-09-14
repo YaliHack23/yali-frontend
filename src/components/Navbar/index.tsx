@@ -25,7 +25,16 @@ function logout() {
 
 const Navbar: React.FC = () => {
   return (
-    <Box bg="white" py="0.5%" borderBottom={"1px solid rgb(219,219,219)"}>
+    <Box
+      bg="white"
+      py="0.5%"
+      borderBottom={"1px solid rgb(219,219,219)"}
+      position="fixed" // Make the navbar fixed
+      top="0" // Position it at the top
+      left="0" // Position it at the left
+      right="0" // Position it at the right
+      zIndex="999"
+    >
       <Flex
         as="nav"
         align="center"
@@ -51,8 +60,8 @@ const Navbar: React.FC = () => {
               bgColor="white"
               outline="none"
               _focus={{
-                borderColor: 'transparent',
-                boxShadow: 'none'
+                borderColor: "transparent",
+                boxShadow: "none",
               }}
             />
             <InputRightElement>
@@ -63,7 +72,7 @@ const Navbar: React.FC = () => {
                 borderRadius="full"
                 borderLeftRadius="0"
                 _hover={{
-                  bgColor: 'gray.200',
+                  bgColor: "gray.200",
                 }}
               />
             </InputRightElement>

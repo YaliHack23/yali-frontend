@@ -30,7 +30,12 @@ export const Feed = ({ user }): JSX.Element => {
   return (
     <div>
       <Layout>
-        <Flex justifyContent={"space-around"} width={"100%"} pt={"2%"}>
+        <Flex
+          justifyContent={"space-around"}
+          width={"100%"}
+          pt={"2%"}
+          mt={"3%"}
+        >
           <Flex width={"80%"}>
             <Box flex={1}>
               <Leftsidecard />
