@@ -28,7 +28,7 @@ export class pb {
             this.user = user!! as User
             this.isLoggedIn = user!! != undefined
         }, true);
-        this.getPostsAndUpdateObservable({ first: 10, last: 0 })
+        this.getPostsAndUpdateObservable({ first: 1, last: 50 })
         this.subscribeToPostsAndUpdateObservable()
 
     }
