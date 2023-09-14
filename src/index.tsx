@@ -5,18 +5,19 @@ import { ViewMyProfile } from "./screens/ViewMyProfile";
 import { ViewAlumniProfile } from "./screens/ViewAlumniProfile";
 import { EditMyProfile } from "./screens/EditMyProfile";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { fetchUser, fetchData } from "./pb";
+import { pb } from "./pb";
 const app = document.getElementById("app");
 const root = ReactDOMClient.createRoot(app);
-fetchUser()
-  .then((user) => {
-    console.log(user);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
 
-fetchData();
+// Ideally this should come from a config/env file
+const pocketbaseUrl = "https://yalihack.azurewebsites.net/";
+
+// This should serve as a singleton instance of the pb client
+const pbClient = new pb(pocketbaseUrl);
+
+// pbClient.logout();
+// pbClient.initLoginPopup();
+
 root.render(
   <BrowserRouter basename="">
     <Routes>
