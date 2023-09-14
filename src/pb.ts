@@ -17,7 +17,7 @@ export class pb {
         // Immediately check if the user is logged in and assign it to the user variable
         if (this.instance.authStore.isValid) {
             // update the user variable whenever the token changes
-            this.user = this.instance.authStore.model!! as User
+            this.user = this.instance.authStore.model! as User
             this.isLoggedIn = true
         } else {
             this.user = undefined
@@ -28,13 +28,19 @@ export class pb {
             this.user = user!! as User
             this.isLoggedIn = user!! != undefined
         }, true);
-        this.getPostsAndUpdateObservable({ first: 10, last: 0 })
-        this.subscribeToPostsAndUpdateObservable()
+        this.getPostsAndUpdateObservable({ first: 1, last: 50 })
+
+        this.subscribeToPostsAndUpdateObservable().then(() => {
+            console.log("Subscribed to posts")
+        }).catch((error) => {
+            console.log("Error subscribing to posts")
+            console.log(error)
+        })
 
     }
 
     private subscribePosts(callback: (data: RecordSubscription<Post>) => void) {
-        this.instance.collection("posts").subscribe("*", callback)
+        return this.instance.collection("posts").subscribe("*", callback)
     }
 
     private getPostsRaw(pagination: pagination, options: RecordListOptions) {
@@ -53,11 +59,11 @@ export class pb {
         })
     }
 
-    subscribeToPostsAndUpdateObservable() {
-        this.subscribePosts(async data => {
+    async subscribeToPostsAndUpdateObservable() {
+        await this.subscribePosts(data => {
             if (data.action == "create") {
                 const currentData = this.postsObservable.value
-                await this.instance.collection("posts").getOne(data.record.id as string, { expand: 'tags,author' }).then((post) => {
+                this.instance.collection("posts").getOne(data.record.id as string, { expand: 'tags,author' }).then((post) => {
                     const newPost = { ...post, author: post.expand?.author, tags: post.expand?.tags }
                     const newData: Post[] = [...currentData, { ...newPost as unknown as Post }]
                     this.postsObservable.next(newData)
@@ -65,7 +71,7 @@ export class pb {
 
             } else if (data.action == "update") {
                 const currentData = this.postsObservable.value
-                await this.instance.collection("posts").getOne(data.record.id as string, { expand: 'tags,author' }).then((post) => {
+                this.instance.collection("posts").getOne(data.record.id as string, { expand: 'tags,author' }).then((post) => {
                     const editedPost = { ...post, author: post.expand?.author, tags: post.expand?.tags }
                     // console.log(editedPost)
                     const newData = currentData.map((post) => {
