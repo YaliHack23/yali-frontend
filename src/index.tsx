@@ -6,6 +6,9 @@ import { ViewAlumniProfile } from "./screens/ViewAlumniProfile";
 import { EditMyProfile } from "./screens/EditMyProfile";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { pb } from "./pb";
+import { Landing } from "./screens/Landing/Landing";
+import { Navigate } from 'react-router-dom';
+
 const app = document.getElementById("app");
 const root = ReactDOMClient.createRoot(app);
 
@@ -13,21 +16,17 @@ const root = ReactDOMClient.createRoot(app);
 const pocketbaseUrl = "https://yalihack.azurewebsites.net/";
 
 // This should serve as a singleton instance of the pb client
-const pbClient = new pb(pocketbaseUrl);
-
-// pbClient.logout();
-pbClient.initLoginPopup();
-
-var user = new pb(pocketbaseUrl).user
-console.log(user)
+export const pbClient = new pb(pocketbaseUrl);
 
 root.render(
-  <BrowserRouter basename="">
+    <BrowserRouter basename="">
     <Routes>
-      <Route path="/" element={<Feed user = {user}/>}></Route>
-      <Route path="/view-profile" element={<ViewAlumniProfile />}></Route>
-      <Route path="/view-my-profile" element={<ViewMyProfile />}></Route>
-      <Route path="/edit-my-profile" element={<EditMyProfile />}></Route>
+      <Route path="/" element={<Landing />}></Route>
+      <Route path="/login" element={pbClient.isLoggedIn ? <Feed user = {pbClient.user} /> : <Landing />}></Route>
+      <Route path="/feeds" element={pbClient.isLoggedIn ? <Feed user = {pbClient.user} /> : <Navigate to="/login" /> }></Route>
+      <Route path="/view-profile" element={pbClient.isLoggedIn ? <ViewAlumniProfile /> : <Navigate to="/login" /> }></Route>
+      <Route path="/view-my-profile" element={pbClient.isLoggedIn ? <ViewMyProfile /> : <Navigate to="/login" /> }></Route>
+      <Route path="/edit-my-profile" element={pbClient.isLoggedIn ? <EditMyProfile /> : <Navigate to="/login" /> }></Route>
     </Routes>
-  </BrowserRouter>
+    </BrowserRouter>
 );
