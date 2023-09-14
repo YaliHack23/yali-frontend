@@ -1,13 +1,11 @@
 
 export type Post = {
-    id: string;
+    id?: string;
     content: string;
-    authorID: string;
-    author?: BaseUser;
-    createdAt: Date;
+    author: BaseUser | string;
+    createdAt?: Date;
     location: string;
-    tagIDs: string[];
-    tags?: Tag[];
+    tags: Tag[] | string[];
 }
 
 export type Tag = {
@@ -21,10 +19,8 @@ export interface User extends BaseUser {
     occupation: string;
     location: string;
     interests: string[];
-    cohortID: string;
-    cohort?: Cohort;
-    track?: Track;
-    trackID: string;
+    cohort?: Cohort | string;
+    track?: Track | string;
     createdAt: Date;
     updatedAt: Date;
     verified: boolean;
