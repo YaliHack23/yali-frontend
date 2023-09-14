@@ -14,6 +14,7 @@ export interface User extends BaseUser {
     location: string;
     interests: string[];
     cohortID: string;
+    trackID: string;
     createdAt: Date;
     updatedAt: Date;
     verified: boolean;

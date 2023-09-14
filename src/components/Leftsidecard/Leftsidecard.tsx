@@ -30,7 +30,7 @@ export const Leftsidecard = ({ className, user }: Props): JSX.Element => {
       <div className="seperator" />
       <div className="element-wrapper">
         <div className="element">
-          <p className="div">Alumni | Cohort {user?.cohortID || "22"} | Track 2</p>
+          <p className="div">Alumni | Cohort {user?.cohortID || "22"} | Track {user?.trackID || "5"}</p>
         </div>
       </div>
     </div>
