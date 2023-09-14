@@ -1,19 +1,29 @@
 import PocketBase, { RecordListOptions, RecordModel, RecordSubscription } from 'pocketbase'
-import { Post, User, pagination, queryOptions } from './types';
-
+import { Post, User, pagination } from './types';
 
 export class pb {
     private instance: PocketBase;
-    user: User
+    user?: User;
+    isLoggedIn: boolean = false;
+
     constructor(url) {
         this.instance = new PocketBase(url)
+        console.log("PocketBase instance created")
+        console.log(this.instance.authStore.isValid)
+
         // Immediately check if the user is logged in and assign it to the user variable
         if (this.instance.authStore.isValid) {
             // update the user variable whenever the token changes
             this.user = this.instance.authStore.model!! as User
+            this.isLoggedIn = true
+        } else {
+            this.user = undefined
+            this.isLoggedIn = false
         }
+
         this.instance.authStore.onChange((_, user) => {
             this.user = user!! as User
+            this.isLoggedIn = user!! != undefined
         }, true);
     }
 
@@ -38,7 +48,7 @@ export class pb {
     }
 
     logout() {
-        this.instance.authStore.clear
+        this.instance.authStore.clear()
     }
 
     async initLoginPopup() {

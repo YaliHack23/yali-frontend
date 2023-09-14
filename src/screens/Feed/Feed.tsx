@@ -5,10 +5,20 @@ import { StyleFilledWrapper } from "../../components/StyleFilledWrapper";
 import { StyleOutlined1 } from "../../icons/StyleOutlined1";
 import { UserPerson2 } from "../../icons/UserPerson2";
 import "./style.css";
+import { pbClient } from "../../index";
+
+function logout() {
+  console.log("logout")
+  pbClient.logout();
+  console.log(pbClient.user)
+}
 
 export const Feed = ({user}): JSX.Element => {
   return (
     <div className="feed">
+      <div className="logout">
+        <button className="btn btn-primary" onClick={logout}>Logout</button>
+      </div>
       <div className="div-2">
         <div className="group">
           <div className="overlap">
