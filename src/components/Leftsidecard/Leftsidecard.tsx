@@ -5,12 +5,14 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 
 import React from "react";
 import "./style.css";
+import { User } from "../../types";
 
 interface Props {
   className: any;
+  user: User;
 }
 
-export const Leftsidecard = ({ className }: Props): JSX.Element => {
+export const Leftsidecard = ({ className, user }: Props): JSX.Element => {
   return (
     <div className={`leftsidecard ${className}`}>
       <div className="item">
@@ -21,14 +23,14 @@ export const Leftsidecard = ({ className }: Props): JSX.Element => {
           </div>
         </div>
         <div className="txt">
-          <div className="name-text">Mr. Musa</div>
-          <div className="text-wrapper">Designer and Cinematographer</div>
+          <div className="name-text">{user?.email || "John Doe"}</div>
+          <div className="text-wrapper">{user?.occupation || "X CEO"}</div>
         </div>
       </div>
       <div className="seperator" />
       <div className="element-wrapper">
         <div className="element">
-          <p className="div">Alumni | Cohort 22 | Track 2</p>
+          <p className="div">Alumni | Cohort {user?.cohortID || "22"} | Track 2</p>
         </div>
       </div>
     </div>

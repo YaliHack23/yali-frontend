@@ -16,12 +16,15 @@ const pocketbaseUrl = "https://yalihack.azurewebsites.net/";
 const pbClient = new pb(pocketbaseUrl);
 
 // pbClient.logout();
-// pbClient.initLoginPopup();
+pbClient.initLoginPopup();
+
+var user = new pb(pocketbaseUrl).user
+console.log(user)
 
 root.render(
   <BrowserRouter basename="">
     <Routes>
-      <Route path="/" element={<Feed />}></Route>
+      <Route path="/" element={<Feed user = {user}/>}></Route>
       <Route path="/view-profile" element={<ViewAlumniProfile />}></Route>
       <Route path="/view-my-profile" element={<ViewMyProfile />}></Route>
       <Route path="/edit-my-profile" element={<EditMyProfile />}></Route>

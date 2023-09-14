@@ -6,7 +6,7 @@ import { StyleOutlined1 } from "../../icons/StyleOutlined1";
 import { UserPerson2 } from "../../icons/UserPerson2";
 import "./style.css";
 
-export const Feed = (): JSX.Element => {
+export const Feed = ({user}): JSX.Element => {
   return (
     <div className="feed">
       <div className="div-2">
@@ -150,7 +150,7 @@ export const Feed = (): JSX.Element => {
             </p>
           </div>
         </div>
-        <Leftsidecard className="leftsidecard-01" />
+        <Leftsidecard className="leftsidecard-01" user={user} />
         <div className="overlap-4">
           <div className="group-11">
             <div className="overlap-5">
