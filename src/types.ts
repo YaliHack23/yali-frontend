@@ -3,7 +3,7 @@ export type Post = {
     id?: string;
     content: string;
     author: BaseUser | string;
-    createdAt?: Date;
+    created?: Date;
     location: string;
     tags: Tag[] | string[];
 }
