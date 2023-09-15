@@ -7,6 +7,7 @@ import Layout from '../Layout';
 
 import { pbClient } from "../../index";
 import { Post } from '../../types';
+import { Subscription } from 'rxjs';
 
 function logout() {
   console.log("logout");
@@ -15,46 +16,42 @@ function logout() {
 }
 
 export const Feed = ({ user }): JSX.Element => {
-  const [isFirstLoad, setIsFirstLoad] = useState(false);
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    if (isFirstLoad) {
       fetchPosts();
-      //setIsFirstLoad(true);
-    }
-  }, [isFirstLoad, posts]);
+      console.log("Fetching posts");
+  }, );
 
-  async function fetchPosts() {
+  function fetchPosts() {
     try {
       pbClient.postsObservable.subscribe((posts) => {
-        console.log(posts)
         setPosts(posts);
       })
-        ;
     } catch (error) {
       console.error('Error fetching posts:', error);
     }
   }
+
   return (
     <div>
       <Layout>
         <Flex justifyContent={"space-around"} width={"100%"} pt={"2%"}>
           <Flex width={"80%"}>
             <Box flex={1}>
-              <Leftsidecard user />
+              <Leftsidecard />
             </Box>
             <Box flex={2} px={"2%"}>
               <CreatePost />
               {posts.map((post) => (
-                <FeedCard post />
+                <FeedCard key = {post.id} post = {post} />
               ))}
               <Button className="btn btn-primary" onClick={logout}>
                 Logout
               </Button>
             </Box>
             <Box flex={1}>
-              <Leftsidecard user />
+              <Leftsidecard />
             </Box>
           </Flex>
         </Flex>

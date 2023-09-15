@@ -6,6 +6,8 @@ import {
   Stack,
 } from '@chakra-ui/react';
 
+import { pbClient } from "../../index";
+
 const CreatePost: React.FC = () => {
   const [postText, setPostText] = useState('');
 
@@ -13,13 +15,14 @@ const CreatePost: React.FC = () => {
     setPostText(event.target.value);
   };
 
-  const handlePostSubmit = () => {
-    // You can implement the logic to submit the post here
-    console.log('Post Text:', postText);
-
-    // Reset the input fields after submitting
-    setPostText('');
-  };
+  async function handlePostSubmit() {
+    try {
+      pbClient.createPost({content :"Cry me a river" , author: pbClient.user!.id, location: "Lukenya, Machakos", tags:["business"]})
+      setPostText('');
+    } catch (error) {
+      console.error('Error creating posts:', error);
+    }
+  }
 
   return (
     <Box

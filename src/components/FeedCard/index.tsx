@@ -61,8 +61,8 @@ const FeedCard = ({ post }): JSX.Element => {
       </Stack>
       <Stack spacing="1" p="4" direction="row" justify="space-between">
         <Stack spacing="1" direction="row">
-          {post.tags.map((tag) => (
-            <Tag>{tag?.name || "Community"}</Tag>
+          {post.tags?.map((tag) => (
+            <Tag>{tag.name || "Community"}</Tag>
           ))}
 
         </Stack>
