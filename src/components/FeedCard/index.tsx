@@ -44,7 +44,7 @@ const FeedCard = ({ post }): JSX.Element => {
                 {post.author?.email || "jdoe@xmail.com"}
               </Text>
               <Text color="gray.500" fontSize="sm">
-                {post?.createdAt || "Nairobi Kenya"} ago  |  {post?.location || "Nairobi Kenya"}
+                {post?.createdAt || "14hrs"} ago  |  {post?.location || "Nairobi Kenya"}
               </Text>
             </Box>
           </Flex>
