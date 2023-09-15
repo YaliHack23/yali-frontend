@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Flex, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Stack,
+  Button
+} from '@chakra-ui/react';
 import FeedCard from '../../components/FeedCard';
 import CreatePost from '../../components/CreatePost';
 import Leftsidecard from '../../components/Leftsidecard';
@@ -43,9 +48,11 @@ export const Feed = ({ user }): JSX.Element => {
             </Box>
             <Box flex={2} px={"2%"}>
               <CreatePost />
+              <Stack spacing="4" p="4">
               {posts.map((post) => (
                 <FeedCard key = {post.id} post = {post} />
               ))}
+              </Stack>
               <Button className="btn btn-primary" onClick={logout}>
                 Logout
               </Button>
