@@ -63,7 +63,7 @@ export class pb {
         await this.subscribePosts(data => {
             if (data.action == "create") {
                 const currentData = this.postsObservable.value
-                this.instance.collection("posts").getOne(data.record.id as string, { expand: 'tags,author' }).then((post) => {
+                this.instance.collection("posts").getOne(data.record.id as string, { sort: '-created', expand: 'tags,author' }).then((post) => {
                     const newPost = { ...post, author: post.expand?.author, tags: post.expand?.tags }
                     const newData: Post[] = [...currentData, { ...newPost as unknown as Post }]
                     this.postsObservable.next(newData)
@@ -71,7 +71,7 @@ export class pb {
 
             } else if (data.action == "update") {
                 const currentData = this.postsObservable.value
-                this.instance.collection("posts").getOne(data.record.id as string, { expand: 'tags,author' }).then((post) => {
+                this.instance.collection("posts").getOne(data.record.id as string, { sort: '-created', expand: 'tags,author' }).then((post) => {
                     const editedPost = { ...post, author: post.expand?.author, tags: post.expand?.tags }
                     // console.log(editedPost)
                     const newData = currentData.map((post) => {

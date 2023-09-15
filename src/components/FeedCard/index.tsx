@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Avatar,
@@ -10,14 +10,15 @@ import {
   Divider,
   Tag,
   Button,
-  Icon
-} from '@chakra-ui/react';
-import { MdPersonAddAlt, MdShare } from 'react-icons/md';
-import { Post } from '../../types';
-import { pbClient } from '../..';
+  Icon,
+} from "@chakra-ui/react";
+import { MdPersonAddAlt, MdShare } from "react-icons/md";
+import { Post } from "../../types";
+import { pbClient } from "../..";
+import moment from "moment";
 
-const FeedCard = ({ post }): JSX.Element => {
-
+const FeedCard: React.FC<Post> = (post: Post): JSX.Element => {
+  const timeAgo = moment(post.created).fromNow();
   return (
     <Box
       borderWidth="1px"
@@ -25,13 +26,13 @@ const FeedCard = ({ post }): JSX.Element => {
       overflow="hidden"
       boxShadow="md"
       backgroundColor={"#fff"}
-    // maxW="600px" // Set the maximum width
+      // maxW="600px" // Set the maximum width
     >
       <Stack spacing="3" p="4">
         <Flex justifyContent={"space-between"}>
           <Flex>
             <Avatar
-              name={post?.name || "John Doe"}
+              name={post?.author?.avatar || "John Doe"}
               src="https://placekitten.com/100/100" // Replace with the user's image URL
               size="lg"
               mr="2"
@@ -44,11 +45,15 @@ const FeedCard = ({ post }): JSX.Element => {
                 {post.author?.email || "jdoe@xmail.com"}
               </Text>
               <Text color="gray.500" fontSize="sm">
-                {post?.createdAt || "14hrs"} ago  |  {post?.location || "Nairobi Kenya"}
+                {timeAgo} | {post?.location || "Nairobi Kenya"}
               </Text>
             </Box>
           </Flex>
-          <Button rightIcon={<Icon as={MdPersonAddAlt} />} colorScheme="blue" size="sm">
+          <Button
+            rightIcon={<Icon as={MdPersonAddAlt} />}
+            colorScheme="blue"
+            size="sm"
+          >
             <Text>Connect</Text>
           </Button>
         </Flex>
@@ -64,7 +69,6 @@ const FeedCard = ({ post }): JSX.Element => {
           {post.tags?.map((tag) => (
             <Tag>{tag.name || "Community"}</Tag>
           ))}
-
         </Stack>
         <Button rightIcon={<Icon as={MdShare} />} colorScheme="blue" size="sm">
           <Text>Share</Text>
