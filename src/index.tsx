@@ -37,9 +37,9 @@ export const pbClient = new pb(pocketbaseUrl);
 // });
 
 // Example of how to get all posts
-// pbClient.postsObservable.subscribe((posts) => {
-//   console.log(posts);
-// });
+//  pbClient.postsObservable.subscribe((posts) => {
+//    console.log(posts);
+//  });
 
 root.render(
   <ChakraProvider>

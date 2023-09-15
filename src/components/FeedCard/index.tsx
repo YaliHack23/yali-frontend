@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Avatar,
@@ -13,8 +13,11 @@ import {
   Icon
 } from '@chakra-ui/react';
 import { MdPersonAddAlt, MdShare } from 'react-icons/md';
+import { Post } from '../../types';
+import { pbClient } from '../..';
 
-const FeedCard: React.FC = () => {
+const FeedCard = ({ post }): JSX.Element => {
+
   return (
     <Box
       borderWidth="1px"
@@ -22,26 +25,26 @@ const FeedCard: React.FC = () => {
       overflow="hidden"
       boxShadow="md"
       backgroundColor={"#fff"}
-      // maxW="600px" // Set the maximum width
+    // maxW="600px" // Set the maximum width
     >
       <Stack spacing="3" p="4">
         <Flex justifyContent={"space-between"}>
           <Flex>
             <Avatar
-              name="John Doe"
+              name={post?.name || "John Doe"}
               src="https://placekitten.com/100/100" // Replace with the user's image URL
               size="lg"
               mr="2"
             />
             <Box>
               <Text color="gray.600" fontSize="sm">
-                John Doe
+                {post.author?.name || "John Doe"}
               </Text>
               <Text color="gray.500" fontSize="sm">
-                YALI Relations Communications team
+                {post.author?.email || "jdoe@xmail.com"}
               </Text>
               <Text color="gray.500" fontSize="sm">
-                14 hours ago  |  Nairobi, Kenya
+                {post?.createdAt || "14hrs"} ago  |  {post?.location || "Nairobi Kenya"}
               </Text>
             </Box>
           </Flex>
@@ -50,16 +53,18 @@ const FeedCard: React.FC = () => {
           </Button>
         </Flex>
         <Text>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis distinctio commodi quo molestias
+          {post.content ||
+            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis distinctio commodi quo molestias
           quis incidunt sunt praesentium corporis non laudantium doloremque tempore officiis minima soluta,
-          ducimus, assumenda maxime officia nesciunt?
+          ducimus, assumenda maxime officia nesciunt?`}
         </Text>
       </Stack>
       <Stack spacing="1" p="4" direction="row" justify="space-between">
         <Stack spacing="1" direction="row">
-          <Tag>Sample Tag</Tag>
-          <Tag>Sample Tag</Tag>
-          <Tag>Sample Tag</Tag>
+          {post.tags?.map((tag) => (
+            <Tag>{tag.name || "Community"}</Tag>
+          ))}
+
         </Stack>
         <Button rightIcon={<Icon as={MdShare} />} colorScheme="blue" size="sm">
           <Text>Share</Text>
