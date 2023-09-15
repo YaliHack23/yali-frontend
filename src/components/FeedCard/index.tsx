@@ -44,7 +44,7 @@ const FeedCard = ({ post }): JSX.Element => {
                 {post.author?.email || "jdoe@xmail.com"}
               </Text>
               <Text color="gray.500" fontSize="sm">
-                {post?.createdAt || "Nairobi Kenya"} ago  |  {post?.location || "Nairobi Kenya"}
+                {post?.createdAt || "14hrs"} ago  |  {post?.location || "Nairobi Kenya"}
               </Text>
             </Box>
           </Flex>
@@ -61,8 +61,8 @@ const FeedCard = ({ post }): JSX.Element => {
       </Stack>
       <Stack spacing="1" p="4" direction="row" justify="space-between">
         <Stack spacing="1" direction="row">
-          {post.tags.map((tag) => (
-            <Tag>{tag?.name || "Community"}</Tag>
+          {post.tags?.map((tag) => (
+            <Tag>{tag.name || "Community"}</Tag>
           ))}
 
         </Stack>
