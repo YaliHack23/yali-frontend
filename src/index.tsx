@@ -45,7 +45,7 @@ root.render(
   <ChakraProvider>
     <BrowserRouter basename="">
       <Routes>
-        <Route path="/" element={<Landing />}></Route>
+        <Route path="/" element={<ViewProfile />}></Route>
         <Route
           path="/login"
           element={

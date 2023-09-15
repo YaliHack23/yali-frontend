@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Flex,
@@ -11,11 +11,14 @@ import {
   Button,
   Heading,
   HStack,
-  Text
-} from '@chakra-ui/react';
+  Text,
+  Icon,
+  chakra,
+} from "@chakra-ui/react";
 // import { YaliLogo } from "./YaliLogo.svg";
-import { SearchIcon } from '@chakra-ui/icons';
+import { SearchIcon } from "@chakra-ui/icons";
 import { pbClient } from "../../index";
+import { MdLogout } from "react-icons/md";
 
 function logout() {
   console.log("logout");
@@ -45,7 +48,8 @@ const Navbar: React.FC = () => {
         {/* Logo and Name */}
         <Flex w="40%">
           <Image
-            src="https://placekitten.com/50/50" // Replace with your image URL
+            // src="https://placekitten.com/50/50" // Replace with your image URL
+            src={YaliLogo}
             alt="User Image"
             borderRadius="full"
             boxSize="50px"
@@ -80,18 +84,24 @@ const Navbar: React.FC = () => {
         </Flex>
 
         {/* User Icon */}
-        <Box>
-          <HStack spacing={5}>
+        {/* <Box> */}
+        {/* <HStack spacing={5}> */}
+        <Flex w={"5%"} justifyContent={"space-between"}>
+          <Box>
             <Avatar
               size="sm"
               name="Your Name"
               src="https://placekitten.com/50/50" // Replace with your user's image URL
             />
-            <Button className="btn btn-primary" onClick={logout}>
+            {/* <Button className="btn btn-primary" onClick={logout}>
               Logout
-            </Button>
-          </HStack>
-        </Box>
+            </Button> */}
+            {/* </HStack> */}
+          </Box>
+          <Box display="flex" alignItems="center">
+            <Icon as={MdLogout} boxSize={6} />
+          </Box>
+        </Flex>
       </Flex>
     </Box>
   );
