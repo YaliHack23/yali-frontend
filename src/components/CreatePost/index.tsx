@@ -17,7 +17,7 @@ const CreatePost: React.FC = () => {
 
   async function handlePostSubmit() {
     try {
-      pbClient.createPost({content :"Cry me a river" , author: pbClient.user!.id, location: "Lukenya, Machakos", tags:["business"]})
+      pbClient.createPost({content :postText , author: pbClient.user!.id, location: "Lukenya, Machakos", tags:["business"]})
       setPostText('');
     } catch (error) {
       console.error('Error creating posts:', error);
