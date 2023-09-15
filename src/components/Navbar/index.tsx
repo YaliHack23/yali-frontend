@@ -8,11 +8,20 @@ import {
   IconButton,
   Avatar,
   Image,
+  Button,
   Heading,
+  HStack,
   Text
 } from '@chakra-ui/react';
 // import { YaliLogo } from "./YaliLogo.svg";
 import { SearchIcon } from '@chakra-ui/icons';
+import { pbClient } from "../../index";
+
+function logout() {
+  console.log("logout");
+  pbClient.logout();
+  console.log(pbClient.user);
+}
 
 const Navbar: React.FC = () => {
   return (
@@ -63,11 +72,16 @@ const Navbar: React.FC = () => {
 
         {/* User Icon */}
         <Box>
-          <Avatar
-            size="sm"
-            name="Your Name"
-            src="https://placekitten.com/50/50" // Replace with your user's image URL
-          />
+          <HStack spacing={5}>
+            <Avatar
+              size="sm"
+              name="Your Name"
+              src="https://placekitten.com/50/50" // Replace with your user's image URL
+            />
+            <Button className="btn btn-primary" onClick={logout}>
+              Logout
+            </Button>
+          </HStack>
         </Box>
       </Flex>
     </Box>

@@ -14,11 +14,6 @@ import { pbClient } from "../../index";
 import { Post } from '../../types';
 import { Subscription } from 'rxjs';
 
-function logout() {
-  console.log("logout");
-  pbClient.logout();
-  console.log(pbClient.user);
-}
 
 export const Feed = ({ user }): JSX.Element => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -53,9 +48,6 @@ export const Feed = ({ user }): JSX.Element => {
                 <FeedCard key = {post.id} post = {post} />
               ))}
               </Stack>
-              <Button className="btn btn-primary" onClick={logout}>
-                Logout
-              </Button>
             </Box>
             <Box flex={1}>
               <Leftsidecard />
