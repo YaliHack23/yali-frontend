@@ -1,5 +1,5 @@
 import PocketBase, { RecordListOptions, RecordModel, RecordSubscription } from 'pocketbase'
-import { Post, Tag, User, pagination } from './types';
+import { BaseUser, Post, Tag, User, pagination } from './types';
 import { BehaviorSubject } from "rxjs";
 
 export class pb {
@@ -114,8 +114,31 @@ export class pb {
         return await Promise.all(promises);
     }
 
+    private validateTags(tags: Tag[] | string[]): tags is string[] {
+        if (Array.isArray(tags)) {
+            // Check if all elements are strings
+            return tags.every((tag) => typeof tag === 'string');
+        }
+        return false;
+    }
+
+    private validateAuthor(author: BaseUser | string): author is string {
+        return typeof author === 'string';
+    }
+
+
     async createPost(post: Post) {
-        let tags: Tag[] = await this.createTags(post.tags!! as string[])
+        // validation: 
+        // make sure the tags exist and type of tags is string[]
+        if (!this.validateTags(post.tags!!)) {
+            throw new Error("Tags must be a string[]")
+        }
+        // make sure the author exists and type of author is string
+        if (!this.validateAuthor(post.author!!)) {
+            throw new Error("Author must be a string")
+        }
+
+        let tags: Tag[] = await this.createTags(post.tags)
         post.tags = tags.map((tag) => tag.id) as string[]
         return await this.instance.collection("posts").create(post)
     }
