@@ -17,7 +17,7 @@ const ViewProfile: React.FC = () => {
   return (
     <div>
       <Layout>
-        <Flex width={"100%"} pt={"2%"} justifyContent={"center"}>
+        <Flex width={"100%"} pt={"4%"} justifyContent={"center"}>
           <Flex
             width={"50%"}
             backgroundColor={"white"}

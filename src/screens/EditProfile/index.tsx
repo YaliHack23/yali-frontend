@@ -8,7 +8,6 @@ import {
   FormLabel,
   Input,
   Select,
-  Divider,
 } from "@chakra-ui/react";
 import Layout from "../Layout";
 
@@ -16,7 +15,7 @@ const EditProfile: React.FC = () => {
   return (
     <div>
       <Layout>
-        <Flex width={"100%"} py={"2%"} justifyContent={"center"}>
+        <Flex width={"100%"} py={"4%"} justifyContent={"center"}>
           <Flex
             width={"50%"}
             backgroundColor={"white"}

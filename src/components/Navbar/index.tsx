@@ -9,28 +9,28 @@ import {
   Avatar,
   Image,
   Button,
-  Heading,
-  HStack,
   Text,
-  Icon,
-  chakra,
+  Icon
 } from "@chakra-ui/react";
-// import { YaliLogo } from "./YaliLogo.svg";
+import YaliLogo from "./YaliLogo.png";
 import { SearchIcon } from "@chakra-ui/icons";
 import { pbClient } from "../../index";
 import { MdLogout } from "react-icons/md";
 
-function logout() {
-  console.log("logout");
-  pbClient.logout();
-  console.log(pbClient.user);
-}
-
 const Navbar: React.FC = () => {
+  const currentUser = pbClient.isLoggedIn ? pbClient.user : undefined;
+
+  function logout() {
+    console.log("logout");
+    pbClient.logout();
+    console.log(pbClient.user);
+    window.location.href = "/login";
+  }
+
   return (
     <Box
       bg="white"
-      py="0.5%"
+      // py="0.1%"
       borderBottom={"1px solid rgb(219,219,219)"}
       position="fixed" // Make the navbar fixed
       top="0" // Position it at the top
@@ -46,61 +46,65 @@ const Navbar: React.FC = () => {
         w="79%" // Set a max width for the content
       >
         {/* Logo and Name */}
-        <Flex w="40%">
+        <Flex flex={1}>
           <Image
-            // src="https://placekitten.com/50/50" // Replace with your image URL
             src={YaliLogo}
             alt="User Image"
             borderRadius="full"
-            boxSize="50px"
+            boxSize="70px"
             objectFit="cover"
             mr={"5%"}
           />
-          <InputGroup color="black">
-            <Input
-              type="text"
-              placeholder="Search"
-              borderRadius="5px"
-              bgColor="white"
-              outline="none"
-              _focus={{
-                borderColor: "transparent",
-                boxShadow: "none",
-              }}
-            />
-            <InputRightElement>
-              <IconButton
-                aria-label="Search"
-                icon={<SearchIcon />}
-                bgColor="transparent"
-                borderRadius="full"
-                borderLeftRadius="0"
-                _hover={{
-                  bgColor: "gray.200",
+          <Flex alignItems={"center"} w={"40%"}>
+            <InputGroup color="black">
+              <Input
+                type="text"
+                placeholder="Search"
+                borderRadius="5px"
+                bgColor="white"
+                outline="none"
+                _focus={{
+                  borderColor: "transparent",
+                  boxShadow: "none",
                 }}
               />
-            </InputRightElement>
-          </InputGroup>
+              <InputRightElement>
+                <IconButton
+                  aria-label="Search"
+                  icon={<SearchIcon />}
+                  bgColor="transparent"
+                  borderRadius="full"
+                  borderLeftRadius="0"
+                  _hover={{
+                    bgColor: "gray.200",
+                  }}
+                />
+              </InputRightElement>
+            </InputGroup>
+          </Flex>
         </Flex>
 
-        {/* User Icon */}
-        {/* <Box> */}
-        {/* <HStack spacing={5}> */}
-        <Flex w={"5%"} justifyContent={"space-between"}>
+        <Flex>
           <Box>
             <Avatar
               size="sm"
-              name="Your Name"
-              src="https://placekitten.com/50/50" // Replace with your user's image URL
+              name={currentUser ? currentUser.name : "Profile Picture"}
+              src={
+                currentUser
+                  ? currentUser.avatar
+                  : "https://placekitten.com/50/50"
+              }
+              mr={"5px"}
             />
-            {/* <Button className="btn btn-primary" onClick={logout}>
-              Logout
-            </Button> */}
-            {/* </HStack> */}
           </Box>
-          <Box display="flex" alignItems="center">
-            <Icon as={MdLogout} boxSize={6} />
-          </Box>
+          <Button
+            rightIcon={<Icon as={MdLogout} />}
+            colorScheme="blue"
+            size="sm"
+            onClick={logout}
+          >
+            <Text>Logout</Text>
+          </Button>
         </Flex>
       </Flex>
     </Box>

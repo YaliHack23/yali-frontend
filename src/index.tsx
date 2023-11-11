@@ -45,15 +45,12 @@ root.render(
   <ChakraProvider>
     <BrowserRouter basename="">
       <Routes>
-        <Route path="/" element={<ViewProfile />}></Route>
         <Route
           path="/login"
-          element={
-            pbClient.isLoggedIn ? <Feed user={pbClient.user} /> : <Landing />
-          }
+          element={pbClient.isLoggedIn ? <Navigate to="/" /> : <Landing />}
         ></Route>
         <Route
-          path="/feeds"
+          path="/"
           element={
             pbClient.isLoggedIn ? (
               <Feed user={pbClient.user} />
