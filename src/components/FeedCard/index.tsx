@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Box,
   Avatar,
   Text,
   Flex,
   Stack,
-  Image,
-  IconButton,
-  Divider,
   Tag,
   Button,
   Icon,
 } from "@chakra-ui/react";
 import { MdPersonAddAlt, MdShare } from "react-icons/md";
 import { Post } from "../../types";
-import { pbClient } from "../..";
 import moment from "moment";
 
 const FeedCard: React.FC<Post> = (post: Post): JSX.Element => {
@@ -26,12 +22,13 @@ const FeedCard: React.FC<Post> = (post: Post): JSX.Element => {
       overflow="hidden"
       boxShadow="md"
       backgroundColor={"#fff"}
-      // maxW="600px" // Set the maximum width
+      key={post?.id || "id"}
     >
       <Stack spacing="3" p="4">
         <Flex justifyContent={"space-between"}>
           <Flex>
             <Avatar
+              // @ts-ignore
               name={post?.author?.avatar || "John Doe"}
               src="https://placekitten.com/100/100" // Replace with the user's image URL
               size="lg"
@@ -39,10 +36,16 @@ const FeedCard: React.FC<Post> = (post: Post): JSX.Element => {
             />
             <Box>
               <Text color="gray.600" fontSize="sm">
-                {post.author?.name || "John Doe"}
+                {
+                  // @ts-ignore
+                  post.author?.name || "John Doe"
+                }
               </Text>
               <Text color="gray.500" fontSize="sm">
-                {post.author?.email || "jdoe@xmail.com"}
+                {
+                  // @ts-ignore
+                  post.author?.email || "jdoe@xmail.com"
+                }
               </Text>
               <Text color="gray.500" fontSize="sm">
                 {timeAgo} | {post?.location || "Nairobi Kenya"}
@@ -67,7 +70,7 @@ const FeedCard: React.FC<Post> = (post: Post): JSX.Element => {
       <Stack spacing="1" p="4" direction="row" justify="space-between">
         <Stack spacing="1" direction="row">
           {post.tags?.map((tag) => (
-            <Tag>{tag.name || "Community"}</Tag>
+            <Tag key={tag.id}>{tag.name || "Community"}</Tag>
           ))}
         </Stack>
         <Button rightIcon={<Icon as={MdShare} />} colorScheme="blue" size="sm">

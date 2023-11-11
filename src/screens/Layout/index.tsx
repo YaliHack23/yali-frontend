@@ -7,7 +7,13 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div style={{backgroundColor: "rgb(245,245,245)", height: "100vh"}}>
+    <div
+      style={{
+        backgroundColor: "rgb(245,245,245)",
+        height: "100vh",
+        overflowY: "hidden",
+      }}
+    >
       <Navbar />
       <main>{children}</main>
       {/* You can add a footer or other common elements here */}

@@ -8,7 +8,6 @@ import {
   FormLabel,
   Input,
   Select,
-  Divider,
 } from "@chakra-ui/react";
 import Layout from "../Layout";
 
@@ -16,10 +15,11 @@ const EditProfile: React.FC = () => {
   return (
     <div>
       <Layout>
-        <Flex width={"100%"} pt={"2%"} justifyContent={"center"}>
+        <Flex width={"100%"} py={"4%"} justifyContent={"center"}>
           <Flex
             width={"50%"}
             backgroundColor={"white"}
+            mt={"3%"}
             p={"2%"}
             boxShadow={"1px 1px rgb(219,219,219)"}
             borderRadius={"5px"}
@@ -32,69 +32,41 @@ const EditProfile: React.FC = () => {
                 size="2xl"
                 mr="2"
               />
-              <FormControl>
+              <FormControl py={"4%"}>
                 <Text fontSize="lg" fontWeight={"bold"}>
                   Your names
                 </Text>
-                <Flex>
-                  <Box>
-                    <FormLabel>First name</FormLabel>
-                    <Input placeholder="First name" />
+                <Flex justifyContent={"space-between"}>
+                  <Box flex={1} mr={"5%"}>
+                    <FormLabel>Name</FormLabel>
+                    <Input placeholder="Enter your name" />
                   </Box>
 
-                  <Box>
-                    <FormLabel>Last name</FormLabel>
-                    <Input placeholder="Last name" />
+                  <Box flex={1}>
+                    <FormLabel>Username</FormLabel>
+                    <Input placeholder="Enter your username" />
                   </Box>
                 </Flex>
               </FormControl>
 
-              <FormControl>
+              <FormControl pt={"4%"}>
                 <FormLabel fontSize="lg" fontWeight={"bold"}>
                   Pick your occupation from the options below:
                 </FormLabel>
-                <Select placeholder="Select country">
-                  <option>United Arab Emirates</option>
-                  <option>Nigeria</option>
+                <Select placeholder="Select occupation">
+                  <option>Communication Expert</option>
+                  <option>Engineer</option>
                 </Select>
               </FormControl>
 
-              <FormControl>
+              <FormControl pt={"4%"}>
                 <FormLabel fontSize="lg" fontWeight={"bold"}>
-                  Your current employer / company
+                  Where do you reside?
                 </FormLabel>
-                <Input placeholder="First name" />
+                <Input placeholder="Enter your location" />
               </FormControl>
 
-              <FormControl>
-                <Text fontSize="lg" fontWeight={"bold"}>
-                  Enter your interests:
-                </Text>
-                <FormLabel>First name</FormLabel>
-                <Input placeholder="First name" />
-              </FormControl>
-
-              <FormControl>
-                <Text fontSize="lg" fontWeight={"bold"}>
-                  Your names
-                </Text>
-                <Flex>
-                  <Box>
-                    <FormLabel>Pick a country from the list:</FormLabel>
-                    <Select placeholder="Select country">
-                      <option>United Arab Emirates</option>
-                      <option>Nigeria</option>
-                    </Select>
-                  </Box>
-
-                  <Box>
-                    <FormLabel>City:</FormLabel>
-                    <Input placeholder="Enter city" />
-                  </Box>
-                </Flex>
-              </FormControl>
-
-              <FormControl>
+              <FormControl pt={"4%"}>
                 <Text fontSize="lg" fontWeight={"bold"}>
                   Enter your interests:
                 </Text>
@@ -102,32 +74,24 @@ const EditProfile: React.FC = () => {
                   This will help fellow alumni and partners reach you based on
                   your interests
                 </FormLabel>
-                <Input placeholder="First name" />
+                <Input placeholder="Enter your interests" />
               </FormControl>
 
-              <Divider py={"2%"} color={"rgb(219,219,219)"} />
+              <FormControl pt={"4%"}>
+                <FormLabel fontSize="lg" fontWeight={"bold"}>
+                  What is your cohort?
+                </FormLabel>
+                <Input placeholder="Enter your cohort" />
+              </FormControl>
 
-              <FormControl>
-                <Text fontSize="lg" fontWeight={"bold"}>
-                  Your names
-                </Text>
-                <Flex>
-                  <Box>
-                    <FormLabel>Pick a country from the list:</FormLabel>
-                    <Select placeholder="Select country">
-                      <option>United Arab Emirates</option>
-                      <option>Nigeria</option>
-                    </Select>
-                  </Box>
-
-                  <Box>
-                    <FormLabel>Pick a country from the list:</FormLabel>
-                    <Select placeholder="Select country">
-                      <option>United Arab Emirates</option>
-                      <option>Nigeria</option>
-                    </Select>
-                  </Box>
-                </Flex>
+              <FormControl pt={"4%"}>
+                <FormLabel fontSize="lg" fontWeight={"bold"}>
+                  What is your track?
+                </FormLabel>
+                <Select placeholder="Select track">
+                  <option>Communication Expert</option>
+                  <option>Engineer</option>
+                </Select>
               </FormControl>
             </Flex>
             <Text>account: musa@gmail.com</Text>

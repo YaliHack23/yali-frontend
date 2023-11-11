@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Flex, Stack, Button } from "@chakra-ui/react";
+import { Box, Flex, Stack } from "@chakra-ui/react";
 import FeedCard from "../../components/FeedCard";
 import CreatePost from "../../components/CreatePost";
 import Leftsidecard from "../../components/Leftsidecard";
@@ -7,9 +7,8 @@ import Layout from "../Layout";
 
 import { pbClient } from "../../index";
 import { Post } from "../../types";
-import { Subscription } from "rxjs";
 
-export const Feed = ({ user }): JSX.Element => {
+const Feed = ({ user }): JSX.Element => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
@@ -30,10 +29,15 @@ export const Feed = ({ user }): JSX.Element => {
   return (
     <div>
       <Layout>
-        <Flex justifyContent={"space-around"} width={"100%"} pt={"2%"}>
+        <Flex
+          justifyContent={"space-around"}
+          width={"100%"}
+          pt={"4%"}
+          mt={"3%"}
+        >
           <Flex width={"80%"}>
             <Box flex={1}>
-              <Leftsidecard />
+              <Leftsidecard user={user} />
             </Box>
             <Box flex={2} px={"2%"}>
               <CreatePost />
@@ -44,7 +48,7 @@ export const Feed = ({ user }): JSX.Element => {
               </Stack>
             </Box>
             <Box flex={1}>
-              <Leftsidecard />
+              <Leftsidecard user={user} />
             </Box>
           </Flex>
         </Flex>
